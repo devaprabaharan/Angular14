@@ -1,0 +1,11 @@
+<h2>My Wells</h2>
+<ul class="wells">
+    <li *ngFor="let well of wells">
+        <button [class.selected]="well === selectedWell" type="button"  (click)="onWellSelect(well)">
+            <span class="badge">{{well.id}}</span>
+            <span class="name">{{well.name}}</span>
+        </button>
+    </li>
+</ul>
+
+<app-well-detail [well]="selectedWell"></app-well-detail>

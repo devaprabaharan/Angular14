@@ -1,0 +1,9 @@
+<div *ngIf="well">
+    <h3>Selected Well:{{well.name | uppercase}}</h3>
+    <div><span>id: </span>{{well.id}}</div>
+
+    <div>
+        <label for="well-name">well name:</label>
+        <input id="well-name" [(ngModel)]="well.name" placeholder="name">
+    </div>
+</div>
